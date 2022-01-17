@@ -1,3 +1,3 @@
 # Penetration-test-tools
 
-SMTP users enumeration.
+List of different tools which could be useful for penetration testing recognition and/or explotation
