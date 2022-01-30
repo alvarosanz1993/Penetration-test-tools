@@ -6,7 +6,7 @@ $MewTestObject | Add-Member -MemberType NoteProperty -Name OS -Value $(Get-WmiOb
 echo "Almacenando la informacion del nombre del equipo..."
 $MewTestObject | Add-Member -MemberType NoteProperty -Name SystemInfo -Value $(Get-WmiObject win32_operatingsystem).CSName
 echo "Almacenando las revisiones de seguridad instaladas (parches). Nos referimos a las KB de Windows..."
-$MewTestObject | Add-Member -MemberType NoteProperty -Name Revisiones -Value $(GetWmiObject -Class win32_quickfixengineering).HotFixID
+$MewTestObject | Add-Member -MemberType NoteProperty -Name Revisiones -Value $(Get-WmiObject -Class win32_quickfixengineering).HotFixID
 echo "Almacenando el listado de usuarios del grupo administradores..."
 $MewTestObject | Add-Member -MemberType NoteProperty -Name UsersAdmin -Value $(Get-LocalGroupMember -Group "Administrators").Name
 echo "Almacenando el nombre de los procesos que se encuentran en ejecucion en la maquina..."
